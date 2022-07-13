@@ -1,12 +1,12 @@
-import { TikTokClone } from '../target/types/tiktok_clone'
+import { TikTokClone } from '../target/types/tiktok_clone';
 import BN from 'bn.js';
 
-const anchor = require('@project-serum/anchor')
-const { TOKEN_PROGRAM_ID } = require('@solana/spl-token')
+const anchor = require('@project-serum/anchor');
+const { TOKEN_PROGRAM_ID } = require('@solana/spl-token');
 const _ = require('lodash')
 const { web3 } = anchor
 const { SystemProgram } = web3
-const assert = require('assert')
+const assert = require('assert');
 const utf8 = anchor.utils.bytes.utf8
 //const provider = anchor.Provider.env()
 const provider = anchor.Provider.local()
