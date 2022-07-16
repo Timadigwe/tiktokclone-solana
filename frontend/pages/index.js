@@ -1,10 +1,20 @@
+//components
+import LoginView from "../components/LoginView";
+import MainView from "../components/MainView";
+import { useWallet } from '@solana/wallet-adapter-react';
 
-import styles from '../styles/Home.module.css'
 
 export default function Home() {
+
+  const { connected } = useWallet();
+
   return (
-    <div className={styles.container}>
-      <h1>Hello</h1>
+    <div className="app">
+      {connected ? (
+        <MainView />
+      ) : (
+        <LoginView/>
+      )}
     </div>
   )
 }
